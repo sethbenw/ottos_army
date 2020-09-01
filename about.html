@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+    <title>Otto's Army</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <script type="text/javascript">
+        // This function gets the current time and injects it into the DOM
+        function updateClock() {
+            // Gets the current time
+            var now = new Date();
+
+            // Get the hours, minutes and seconds from the current time
+            var h = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Format hours, minutes and seconds
+            
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (h > 12) {
+                h = h - 12
+            }
+            if (h < 10 ) {
+              h = '0' + h
+            }
+
+            // Gets the element we want to inject the clock into
+            var elem = document.getElementById('clock');
+
+            // Sets the elements inner HTML value to our clock data
+            elem.innerHTML = h + ' : ' + minutes;
+        }
+
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("header").className = "scroll";
+            } else {
+                document.getElementById("header").className = "";
+            }
+        }
+    </script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" onload="setInterval('updateClock()', 200);">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="img/full_main_logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" style="opacity: 0">Otto's Army</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="about.html" style="color: #ee3b24">About Us</a>
+                    </li>
+                    <!--li>
+                        <a class="page-scroll" href="list.html">List Rules</a>
+                    </li-->
+                    <li>
+                        <a class="page-scroll" href="traditions.html">Traditions</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="board.html">The Board</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header class="about_header">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <p></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 col-lg-offset-1">
+                    <p class="text-about">Top universities with top athletic departments always have a strong student section to cheer their student-athletes on; and Syracuse University is no different. Otto’s Army is the official student section for SU that supports all Division I athletic teams on the campus. Founded in 2006 by a few friends who saw a need to organize student fans, Otto’s Army has exceeded expectations and shown all opponents that they will fight alongside the athletes over the past ten years.</p>
+                    <p class="text-about">As soon as a Syracuse University student commits to attend the university, they are automatically a soldier in the army. As the only current organization to include every student on campus, Otto’s Army can always count on having a strong presence at a variety of games. The students uphold the “Loud House” name in the Carrier Dome, pack the hill for soccer games and travel hundreds of miles to support SU at opposing stadiums.</p>
+                    <p class="text-about">All students are welcome to attend bi-weekly meetings to stay up to date on all games and events happening involving Otto’s Army. However, all you need to be a soldier in this army is to bleed orange. #GoCuse!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="clock_container">
+            <div id="clock"></div>
+        </div>
+    </footer>
+
+    <a href="http://www.cuse.com/students">
+        <header class="student_pass">
+            
+            <div class="pass-content">
+                <div class="pass-content-inner">
+                    <p></p>
+                </div>
+            </div>
+        </header>
+    </a>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">CONNECT WITH OTTO'S ARMY</h3>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-2 col-lg-offset-1 text-center">
+                    <a href="https://www.facebook.com/ottosarmy/"><i class="fa fa-facebook-square fa-5x wow bounceIn"></i></a>
+                    <p>Like us on facebook</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://twitter.com/OttosArmy"><i class="fa fa-twitter fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.instagram.com/ottosarmy/"><i class="fa fa-instagram fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.youtube.com/user/OttosArmySU"><i class="fa fa-youtube fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>ottosarmysu</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://listserv.syr.edu/scripts/wa.exe?SUBED1=OTTOSARMY&A=1"><i class="fa fa-envelope-o fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>Join the listserve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="official">
+            The official student section of the Syracuse Orange
+            <div class="privacy"><a href="http://www.sidearmsports.com/privacypolicy/" target="blank">Privacy</a> / <a href="http://www.sidearmsports.com/terms-of-service/" target="_blank">Policy</a></div>
+        </div>
+        <div class="sidearm">
+            <a href="http://www.sidearmsports.com">
+                <img src="img/sidearm_logo.png">
+            </a>
+        </div>
+        <div class="official">
+            © 2019 Otto's Army
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+
+</body>
+
+</html>

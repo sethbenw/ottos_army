@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+    <title>Otto's Army</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <script type="text/javascript">
+        // This function gets the current time and injects it into the DOM
+        function updateClock() {
+            // Gets the current time
+            var now = new Date();
+
+            // Get the hours, minutes and seconds from the current time
+            var h = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Format hours, minutes and seconds
+            
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (h > 12) {
+                h = h - 12
+            }
+            if (h < 10 ) {
+              h = '0' + h
+            }
+
+            // Gets the element we want to inject the clock into
+            var elem = document.getElementById('clock');
+
+            // Sets the elements inner HTML value to our clock data
+            elem.innerHTML = h + ' : ' + minutes;
+        }
+
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("header").className = "scroll";
+            } else {
+                document.getElementById("header").className = "";
+            }
+        }
+    </script>
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" onload="setInterval('updateClock()', 200);">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="img/full_main_logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" style="opacity: 0">Otto's Army</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="about.html">About Us</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="list.html" style="color: #ee3b24">List Rules</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="traditions.html">Traditions</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="board.html">The Board</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header class="list_header">
+        <div class="header-content">
+            <div class="header-content-inner">
+                <p></p>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-11 col-lg-offset-1">
+                    <h2 class="section-heading">Definition and Purpose</h2>
+                    <ul class="text-about">
+                        <li>
+                        The List is a handwritten list of all students in line prior to the gate opening time of a Syracuse University Men’s Basketball game.
+                        </li>
+                        <li>
+                        Gate E is the assigned gate for student entry to games
+                        </li>
+                        <li>
+                        The List is the order in which students select their seats.
+                        </li>
+                        <li>
+                        The List is used to ensure safe, fair, and organized entry for students.
+                        </li>
+                        <li>
+                        Students must be student season ticket holders to participate.
+                        </li>
+                        <li>
+                        Students are not required to participate in this system. However, students on The List will choose seats before those not on The List.
+                        </li>
+                        <li>
+                        This system will only apply to as many students as fill the floor seating (blue seat, non-bleacher) area of the Student Section.
+                        </li>
+                    </ul>
+                    <h2 class="section-heading">Basic Process</h2>
+                    <ul class="text-about">
+                        <li>The first group (up to four students) to arrive at Gate E begins The List. These students are the list facilitators.</li>
+                        <li>The list facilitators may defer any or all responsibilities to the Events Officer of Otto’s Army.</li>
+                        <li>As students arrive, they are responsible for finding The List and adding their group to The List.</li>
+                        <li>Before the gates open, each group will receive an Otto’s Army numbered card that corresponds with its group number.</li>
+                        <li>When the Carrier Dome staff begins its entry procedures, students will line up in the order they arrived, as defined by The List. Otto’s Army board members will organize this task.</li>
+                        <li>Upon entry, students will make their way to the Student Section. There will be NO RUNNING!</li>
+                        <li>Only students who are there at the opening of the gates and taking of seats get the seats.</li>
+                        <li>THERE WILL BE NO SAVING OF SEATS!</li>
+                        <li>Otto’s Army board members are responsible for ensuring that students pick their seats in the order defined by The List.</li>
+                        <li>Upon taking their seats, groups will return their official Otto’s Army numbered card to an Otto’s Army Board member.</li>
+                    </ul>
+                    <h2 class="section-heading">Rules</h2>
+                    <ul class="text-about">
+                        <li>The following rules apply to every game</li>
+                        <li>Abuses or violations of these rules should be reported to Otto’s Army Board Members
+                            <ul>
+                                <li>Maximum group size: 4</li>
+                                <li>All students must be student section season ticket holders to sit in the floor seats and participate in the list process.</li>
+                                <li>Group modifications
+                                    <ul>
+                                        <li>Groups may subtract members from their groups at any time.</li>
+                                        <li>Groups may not add members once another group succeeds them.</li>
+                                        <li>Groups may exchange members at any time before the gates open.</li>
+                                    </ul>
+                                </li>
+                                <li>Presence
+                                    <ul>
+                                        <li>One group member must be present at the gates at all times.</li>
+                                        <li>If a group does not have any members at the gate, it will be allowed 15 minutes for a member to return.</li>
+                                        <li>If no one from said group returns within the 15-minute grace period, the group will be moved to the end of the list.</li>
+                                    </ul>   
+                                </li>
+                                <li>If another Syracuse university sporting event or, an Otto’s Army sponsored activity on main campus is occurring during the list camping, the following rules will apply
+                                    <ul>
+                                        <li>The list will move inside the Carrier Dome.</li>
+                                        <li>The list will continue in the Carrier Dome (all rules still apply except that the list is now inside instead of outside at Gate E)</li>
+                                        <li>All groups must move inside the Carrier Dome. NO EXCEPTIONS.</li>
+                                        <li>Upon completion of the sporting even inside the Carrier Dome the list will go back outside. All groups are expected to have their minimum of one member at Gate E within 15 minutes of game completion.</li>
+                                    </ul>
+                                </li>
+                                <li>Groups must sit together and are allowed to choose any seats within the blue, floor seat area. HOWEVER, groups may not leave a space of one seat between themselves and another group. There must be zero, or more than one seat between groups.</li>
+                                <li>Students must sit in the part of the student section that their wristband denotes.
+                                    <ul>
+                                        <li>If a group or an individual would like to sit in the bleachers instead of the blue seats, they can wait outside the Carrier Dome until all blue seat wristbands have been given out.</li>
+                                    </ul>
+                                </li>
+                                <li> A student cannot start a list for a men’s basketball home game until all previous men’s basketball home games have been completed. You can only start a list for the new game three hours after the tip off of the previous game.</li>
+                                <li>The list will move inside when the Dome Staff and Syracuse University Department of Public Safety determines that student safety is at risk
+                                    <ul>
+                                        <li>If the list moves inside the Carrier Dome, and a situation arises where students must vacate the Carrier Dome, the list will be suspended and will resume at a preset time. A list check will occur 15 minutes after the set time</li>
+                                        <li>Campers must respect all activities going on in the Carrier Dome while camping out. Failure to comply will result in removal from the list for that game.</li>
+                                        <li>Campers must stay in the designated area reserved for people on the list. Failure to comply will result in removal from the list for that game.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="clock_container">
+            <div id="clock"></div>
+        </div>
+    </footer>
+
+    <a href="http://www.cuse.com/students">
+        <header class="student_pass">
+            
+            <div class="pass-content">
+                <div class="pass-content-inner">
+                    <p></p>
+                </div>
+            </div>
+        </header>
+    </a>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">CONNECT WITH OTTO'S ARMY</h3>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-2 col-lg-offset-1 text-center">
+                    <a href="https://www.facebook.com/ottosarmy/"><i class="fa fa-facebook-square fa-5x wow bounceIn"></i></a>
+                    <p>Like us on facebook</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://twitter.com/OttosArmy"><i class="fa fa-twitter fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.instagram.com/ottosarmy/"><i class="fa fa-instagram fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.youtube.com/user/OttosArmySU"><i class="fa fa-youtube fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>ottosarmysu</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://listserv.syr.edu/scripts/wa.exe?SUBED1=OTTOSARMY&A=1"><i class="fa fa-envelope-o fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>Join the listserve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="official">
+            The official student section of the Syracuse Orange
+            <div class="privacy"><a href="http://www.sidearmsports.com/privacypolicy/" target="blank">Privacy</a> / <a href="http://www.sidearmsports.com/terms-of-service/" target="_blank">Policy</a></div>
+        </div>
+        <div class="sidearm">
+            <a href="http://www.sidearmsports.com">
+                <img src="img/sidearm_logo.png">
+            </a>
+        </div>
+        <div class="official">
+            © 2019 Otto's Army
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+
+</body>
+
+</html>

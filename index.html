@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ottosarmylogo_wEd_icon">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Otto's Army</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+
+    <link rel="stylesheet" media="screen and (max-device-width: 800px)" href="css/creative-mobile.css" />
+
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <script>window.twttr = (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+          if (d.getElementById(id)) return t;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "https://platform.twitter.com/widgets.js";
+          fjs.parentNode.insertBefore(js, fjs);
+
+          t._e = [];
+          t.ready = function(f) {
+            t._e.push(f);
+          };
+
+          return t;
+        }(document, "script", "twitter-wjs"));
+    </script>
+    <script type="text/javascript">
+        // This function gets the current time and injects it into the DOM
+        function updateClock() {
+            // Gets the current time
+            var now = new Date();
+
+            // Get the hours, minutes and seconds from the current time
+            var h = now.getHours();
+            var minutes = now.getMinutes();
+
+            // Format hours, minutes and seconds
+            
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            if (h > 12) {
+                h = h - 12
+            }
+            if (h < 10 ) {
+              h = '0' + h
+            }
+
+            // Gets the element we want to inject the clock into
+            var elem = document.getElementById('clock');
+
+            // Sets the elements inner HTML value to our clock data
+            elem.innerHTML = h + ' : ' + minutes;
+        }
+
+        window.onscroll = function() {myFunction()};
+        function myFunction() {
+            if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                document.getElementById("header").className = "scroll";
+            } else {
+                document.getElementById("header").className = "";
+            }
+        }
+
+            window.onscroll = function() {myFunction()};
+            function myFunction() {
+                if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                    document.getElementById("header").className = "scroll";
+                } else {
+                    document.getElementById("header").className = "";
+                }
+            }
+
+    </script>
+    <script type="text/javascript">
+        var date=new Date();
+        var year=date.getFullYear();
+        var month=date.getMonth();
+        var day=date.getDate(); // fixed
+
+        function SetDivContent() {
+
+            if (year==2019 && month==0) { 
+                if (day>=15 && day<26) { 
+                    $("#first").css("display","block");
+                }
+                else if (day>=26 && day<31) { 
+                    $("#second").css("display","block");
+                }
+                else if (day==31) {
+                    $("#second").css("display","block");
+                }
+            }
+            else if (year==2019 && month==1) { 
+                if (day>=1 && day<8) { 
+                    $("#third").css("display","block");
+                }
+                else if (day>=8 && day<10) { 
+                    $("#fourth").css("display","block");
+                }
+                else if (day>=10 && day<16) { 
+                    $("#fifth").css("display","block");
+                }
+                else if (day>=16 && day<19) { 
+                    $("#sixth").css("display","block");
+                }
+                else if (day>=20 && day<24) {
+                    $("#seventh").css("display","block");
+                }
+                else if (day>=24 && day<30) {
+                    $("#eighth").css("display","block");
+                }
+            }
+            else{
+                $("no-week").css("display","black");
+            }
+
+        }
+    </script> 
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" onload="setInterval('updateClock()', 200); SetDivContent();">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html"><img src="img/full_main_logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" style="opacity: 0">Otto's Army</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="about.html">About Us</a>
+                    </li>
+                    <!--li>
+                        <a class="page-scroll" href="list.html">List Rules</a>
+                    </li-->
+                    <li>
+                        <a class="page-scroll" href="traditions.html">Traditions</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="board.html">The Board</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <p></p>
+            </div>
+        </div>
+    </header>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading" style="color: #052a50; font-family: nexa_boldregular">OTTO'S ARMY EVENTS</h2>
+                    <hr class="primary" style="border-color: #ee3b24">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <!-- Week 1 -->
+            <div class="row no-gutter">
+
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 2
+                                </div>
+                                <img src="img/lax-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Mens Lacrosse</div>
+                                <div class="project-school">Hobart</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 3
+                                </div>
+                                <img src="img/lax-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Womens Lacrosse</div>
+                                <div class="project-school">Virginia Tech</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 5
+                                </div>
+                                <img src="img/tennis-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Tennis</div>
+                                <div class="project-school">Pitt</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 5
+                                </div>
+                                <img src="img/softball-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Softball</div>
+                                <div class="project-school">NC State</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 6
+                                </div>
+                                <img src="img/rowing-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Womens Rowing</div>
+                                <div class="project-school">Virginia</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <a class="event-box">
+                        <img src="img/event_card.png" class="img-responsive" alt="">
+                        <div class="event-box-caption">
+                            <div class="event-box-caption-content">
+                                <div class="project-name">
+                                    April 6
+                                </div>
+                                <img src="img/rowing-logo.png" class="img-responsive" alt="">
+                                <div class="project-sport">Mens Rowing</div>
+                                <div class="project-school">Wisconsin</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="banner-bottom">
+                        <img src="img/banner_bottom.png" class="img-responsive" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>        
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="calender">
+                        <a href="http://cuse.com/calendar.aspx" target="_blank">full schedule available @ cuse.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="gateE"></div>
+    </section>
+
+    <footer>
+        <div class="clock_container">
+            <div id="clock"></div>
+        </div>
+    </footer>
+
+    <a href="http://www.cuse.com/students">
+        <header class="student_pass">        
+            <div class="pass-content">
+                <div class="pass-content-inner">
+                    <p></p>
+                </div>
+            </div>
+        </header>
+    </a>
+
+<!--section id="twitter_feed">
+    <a class="twitter-timeline"
+      href="https://twitter.com/OttosArmy"
+      data-tweet-limit="3">
+    Tweets by @OttosArmy
+    </a>
+</section-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">CONNECT WITH OTTO'S ARMY</h3>
+                    <hr class="primary">
+                </div>
+                <div class="col-lg-2 col-lg-offset-1 text-center">
+                    <a href="https://www.facebook.com/ottosarmy/"><i class="fa fa-facebook-square fa-5x wow bounceIn"></i></a>
+                    <p>Like us on facebook</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://twitter.com/OttosArmy"><i class="fa fa-twitter fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.instagram.com/ottosarmy/"><i class="fa fa-instagram fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>@ottosarmy</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://www.youtube.com/user/OttosArmySU"><i class="fa fa-youtube fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>ottosarmysu</p>
+                </div>
+                <div class="col-lg-2 text-center">
+                    <a href="https://listserv.syr.edu/scripts/wa.exe?SUBED1=OTTOSARMY&A=1"><i class="fa fa-envelope-o fa-5x wow bounceIn" data-wow-delay=".1s"></i></a>
+                    <p>Join the listserve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="official">
+            The official student section of the Syracuse Orange
+            <div class="privacy"><a href="http://www.sidearmsports.com/privacypolicy/" target="blank">Privacy</a> / <a href="http://www.sidearmsports.com/terms-of-service/" target="_blank">Policy</a></div>
+        </div>
+        <div class="sidearm">
+            <a href="http://www.sidearmsports.com">
+                <img src="img/sidearm_logo.png">
+            </a>
+        </div>
+        <div class="official">
+            © 2019 Otto's Army
+        </div>
+    </footer>
+
+    <!--div class="sticky">
+        <div class="sticky_container pagewidth">
+            <div class="sticky_logo"></div>
+            <div id="scoreboard">
+                <div class="twitter-feed"-->
+                    <!-- ko foreach: twitterFeed -->
+                        <!--span class="tweet" data-bind="text: text"></span-->
+                    <!-- /ko  -->
+                <!--/div>
+            </div>
+            <div class="hashtag">#OrangeNation</div>
+        </div>
+    </div-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+    <script type="text/javascript" src="http://assets.sidearmsports.com.s3.amazonaws.com/plugins/jquery.overflow-2.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+
+
+</body>
+
+</html>
